@@ -1,44 +1,63 @@
 :root {
-
-    --primary-text-color: #fff;
-    --background-color-1: #F08EFC;
-    --background-color-2: #EE5166;
-
+	--primary-text-color: #ffffff;
+	--heading-text-color: #b8e994;
+	--background-color-1: #f08efc;
+	--background-color-2: #ee5166;
 }
-
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    background: var(--background-color-1);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    animation: backgroundColor 5s infinite;
+	font-size: 16px;
+	box-sizing: border-box;
+	background: var(--background-color-1);
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+	animation: backgroundColor 5s infinite;
+	scroll-behavior: smooth;
 }
 
 @keyframes backgroundColor {
+	0% {
+		background: var(--background-color-1);
+	}
 
-    0% {
-        background: var(--background-color-1);
-    }
+	50% {
+		background: var(--background-color-2);
+	}
 
-    50% {
-        background: var(--background-color-2);
-    }
-
-    100% {
-        background: var(--background-color-1);
-    }
-
+	100% {
+		background: var(--background-color-1);
+	}
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.primary-title {
+	font-family: 'Homemade Apple', cursive;
+	color: var(--heading-text-color);
+}
+
+span {
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+span.fade {
+	opacity: 1;
 }
