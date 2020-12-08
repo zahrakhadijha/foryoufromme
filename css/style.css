@@ -1,5 +1,9 @@
 :root {
 
+    --primary-text-color: #fff;
+    --background-color-1: #F08EFC;
+    --background-color-2: #EE5166;
+
 }
 
 
@@ -12,7 +16,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    background: #8A2387;
+    background: var(--background-color-1);
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
@@ -20,28 +24,21 @@ html {
 }
 
 @keyframes backgroundColor {
-    0% {
-        background: #8A2387;
-    }
 
-    25% {
-        background: #E94057;
+    0% {
+        background: var(--background-color-1);
     }
 
     50% {
-        background: #F27121;
-    }
-
-    75% {
-        background: #E94057;
+        background: var(--background-color-2);
     }
 
     100% {
-        background: #8A2387;
+        background: var(--background-color-1);
     }
+
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-
 }
